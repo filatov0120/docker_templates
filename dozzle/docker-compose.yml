@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  dozzle:
+    container_name: dozzle
+    image: amir20/dozzle:latest
+    environment:
+      DOZZLE_BASE: /logs
+      DOZZLE_USERNAME: need_change
+      DOZZLE_PASSWORD: need_change
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 8080:8080
